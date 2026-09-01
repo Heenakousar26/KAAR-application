@@ -43,7 +43,7 @@ function App() {
 
   useEffect(() => {
 
-    fetch("http://localhost:8080/api/payments")
+    fetch("https://kaar-application-production.up.railway.app/api/payments")
       .then(response => response.json())
       .then(data => {
         setPayments(data);
@@ -65,7 +65,7 @@ function App() {
     setMatches([]);
 
     fetch(
-      `http://localhost:8080/api/payments/${payment.paymentId}/matches`
+      `https://kaar-application-production.up.railway.app/api/payments/${payment.paymentId}/matches`
     )
       .then(response => response.json())
       .then(data => {
@@ -258,7 +258,7 @@ function App() {
   const confirmMatch = (paymentId, invoiceId) => {
 
     fetch(
-      `http://localhost:8080/api/payments/${paymentId}/confirm/${invoiceId}`,
+      `https://kaar-application-production.up.railway.app/api/payments/${paymentId}/confirm/${invoiceId}`,
       {
         method: "POST"
       }
