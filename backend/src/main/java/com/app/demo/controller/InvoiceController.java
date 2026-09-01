@@ -8,7 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "https://frontend-ashy-phi-78.vercel.app"
+})
 @RestController
 public class InvoiceController {
 
